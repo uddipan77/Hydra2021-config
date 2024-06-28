@@ -27,3 +27,6 @@ class MNISTConfig:
     paths: Paths
     files: Files
     params: Params
+
+#MNISTConfig acts like the class provides a single entry point for the entire configuration, now my cfg obj in main will refer to this class to access the rest 
+#of the config class and their attributes
