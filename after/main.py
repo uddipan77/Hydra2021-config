@@ -9,6 +9,11 @@ from ds.models import LinearNet
 from ds.runner import Runner, run_epoch
 from ds.tracking import TensorboardExperiment
 
+#as we have structured our yaml file using config.py and in that our main class is MNISTConfig
+#hydra will not be able to use that structured version until we do the below two
+# we create a configstore and we pass the main class MNISTConfig as a node
+#then we can use this MNISTConfig with cfg of main
+
 cs = ConfigStore.instance()
 cs.store(name="mnist_config", node=MNISTConfig)
 
