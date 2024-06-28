@@ -13,7 +13,7 @@ cs = ConfigStore.instance()
 cs.store(name="mnist_config", node=MNISTConfig)
 
 
-@hydra.main(config_path="conf", config_name="config")
+@hydra.main(config_path="conf", config_name="config") #by placing this before main hydra can use config.yaml in main using cfg object
 def main(cfg: MNISTConfig) -> None:
     print(OmegaConf.to_yaml(cfg))
 
